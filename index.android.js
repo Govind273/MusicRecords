@@ -6,26 +6,14 @@
 
 import React from 'react';
 import {
-  AppRegistry,
-  Text
+  Text,
+  View
 } from 'react-native';
 
-import Header from './components/header';
-const App = () => {
- 
+import Album from './components/Album';
 
-  return(
-  		<Header />
-  	);
-  };
-
-const styles ={ 
-  container: {
-    fontSize: 20,
-    backgroundColor: "orange"
-  }
-};
-
-
+const App = () => (
+	     <Album />
+  	  );
 
 AppRegistry.registerComponent('albums', () => App);
