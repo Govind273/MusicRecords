@@ -10,10 +10,13 @@ import {
   Text
 } from 'react-native';
 
+import Header from './components/header';
 const App = () => {
-  const {container} = styles;
+ 
 
-  return <Text style={container}>Hello</Text>;
+  return(
+  		<Header />
+  	);
   };
 
 const styles ={ 
