@@ -3,17 +3,18 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
 import React from 'react';
-import {
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry,View} from 'react-native';
+import Header from './components/header';
+import AlbumList from './components/AlbumList';
 
-import Album from './components/Album';
-
+// Create a component
 const App = () => (
-	     <Album />
-  	  );
+	<View>
+  		<Header headerText={'Chacha'}/>
+  		<AlbumList />
+  	</View>
+);
+
 
 AppRegistry.registerComponent('albums', () => App);

@@ -1,40 +1,34 @@
-//Import some files from React and React-native
 import React from 'react';
-import { Text, View} from 'react-native';
+import { Text, View } from 'react-native';
 
+// Make a component
+const Header = (props) => {
+  const { textStyle, viewStyle } = styles;
 
-
-// Create the component
-const Header =(props) =>	{
-
-	const {textStyle,container} =styles;
-
-	return (
-		<View style = {container}>
-		<Text style ={textStyle}>{props.headerText}</Text>
-		<Text style = {textStyle}>{props.name}</Text>
-		</View>
-	);
+  return (
+    <View style={viewStyle}>
+      <Text style={textStyle}>{props.headerText}</Text>
+    </View>
+  );
 };
 
-const styles ={
-
-		textStyle: {
-		fontSize: 20,
-	},
-	container: {
-		flex:1,
-		backgroundColor:'#AAF1BE',
-		justifyContent: 'center',
-		alignItems: 'center',
-		height: 60,
-		paddingTop: 15,
-		elevation: 2,
-		position: 'relative'
-		
-	}
+const styles = {
+  viewStyle: {
+    backgroundColor: '#F8F8F8',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 60,
+    paddingTop: 15,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    elevation: 2,
+    position: 'relative'
+  },
+  textStyle: {
+    fontSize: 22
+  }
 };
 
-//Export it to the other part of the Applications
-
+// Make the component available to other parts of the app
 export default Header;
