@@ -8,12 +8,18 @@ const AlbumDetail = (props) => {
 	return (
 		<Card>
 		  <CardSection>
-		    <Text>{props.album.title}</Text>
-	      </CardSection>
-	      
-		</Card>
+		   <View>
 
+		   </View>
+		   <View>
+		     <Text>{props.album.title}</Text>
+		     <Text>{props.album.artist}</Text>
+		   </View>
+		 </CardSection>
+		</Card>
 	);
-}
+
+};
+	
 
 export default AlbumDetail;
