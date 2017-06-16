@@ -13,9 +13,12 @@ const AlbumDetail = ({album}) => {
 		<Card>
 		  <CardSection>
 		   <View>
-            <Image source={{uri: thumbnail_image}}/>
+            <Image 
+            	style ={thumbnail_imageStyle}
+            	source={{uri: thumbnail_image}}
+            />
 		   </View>
-		   <View>
+		   <View style = {headerTextStyle}>
 		     <Text>{title}</Text>
 		     <Text>{artist}</Text>
 		   </View>
@@ -27,11 +30,12 @@ const AlbumDetail = ({album}) => {
 	
    const styles = {
    		headerTextStyle: {
-   			flexDirection: 'row',
+   			flexDirection: 'column',
    			justifyContent: 'space-around'
    		},
    		thumbnail_imageStyle: {
-   			
+   			height: 50,
+   			width: 50
    		}
 
    };
