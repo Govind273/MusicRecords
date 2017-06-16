@@ -7,19 +7,23 @@ import CardSection from './CardSection';
 const AlbumDetail = ({album}) => {
 
 	const {title, artist, thumbnail_image} = album;
-	const {headerTextStyle, thumbnail_imageStyle} = styles;
+	const {headerTextStyle, 
+		headerTitleStyle,
+		thumbnail_imageStyle,
+		thumbnail_imageContainerStyle
+    } = styles;
 
 	return (
 		<Card>
 		  <CardSection>
-		   <View>
+		   <View style ={thumbnail_imageContainerStyle}>
             <Image 
             	style ={thumbnail_imageStyle}
             	source={{uri: thumbnail_image}}
             />
 		   </View>
 		   <View style = {headerTextStyle}>
-		     <Text>{title}</Text>
+		     <Text style={headerTitleStyle}>{title}</Text>
 		     <Text>{artist}</Text>
 		   </View>
 		 </CardSection>
@@ -33,9 +37,19 @@ const AlbumDetail = ({album}) => {
    			flexDirection: 'column',
    			justifyContent: 'space-around'
    		},
+   		headerTitleStyle: {
+   			fontSize: 18
+   		},
+
    		thumbnail_imageStyle: {
    			height: 50,
    			width: 50
+   		},
+   		thumbnail_imageContainerStyle: {
+   			justifyContent: 'center',
+   			alignItems: 'center',
+   			marginLeft: 10,
+   			marginRight: 10,
    		}
 
    };
