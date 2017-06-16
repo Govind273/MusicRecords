@@ -1,10 +1,13 @@
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 
-const Card = () =>{
-	return(
 
-		<View></View>
+
+const Card = (props) => {
+	return (
+		<View style = { styles.containerStyle } >
+		  {props.children}
+		</View>
 
 	);
 };
@@ -28,4 +31,4 @@ const styles ={
 
 };
 
-export default Crad;
+export default Card;
