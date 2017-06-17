@@ -3,23 +3,25 @@ import { Text, View, Image } from 'react-native';
 
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
-const AlbumDetail = ({album}) => {
+const AlbumDetail = ({ album }) => {
 
-	const {title, artist, thumbnail_image} = album;
-	const {headerTextStyle, 
-		headerTitleStyle,
-		thumbnail_imageStyle,
-		thumbnail_imageContainerStyle
-    } = styles;
+  const { title, artist, thumbnail_image, image } = album;
+  const { headerTextStyle, 
+    headerTitleStyle,
+    imageStyle,
+    thumbnail_imageStyle,
+    thumbnail_imageContainerStyle
+  } = styles;
 
 	return (
-		<Card>
-		  <CardSection>
-		   <View style ={thumbnail_imageContainerStyle}>
+	  <Card>
+        <CardSection>
+          <View style={ thumbnail_imageContainerStyle }>
             <Image 
-            	style ={thumbnail_imageStyle}
-            	source={{uri: thumbnail_image}}
+               style={thumbnail_imageStyle}
+               source={{ uri: thumbnail_image }}
             />
 		   </View>
 		   <View style = {headerTextStyle}>
@@ -27,6 +29,18 @@ const AlbumDetail = ({album}) => {
 		     <Text>{artist}</Text>
 		   </View>
 		 </CardSection>
+		 <CardSection>
+		 	
+		 	<Image 
+		 		style ={imageStyle}
+		 		source={{uri: image}} />
+		 	
+		</CardSection>
+
+		<CardSection>
+		  <Button />
+		</CardSection>
+
 		</Card>
 	);
 
@@ -34,7 +48,7 @@ const AlbumDetail = ({album}) => {
 	
    const styles = {
    		headerTextStyle: {
-   			flexDirection: 'column',
+   		flexDirection: 'column',
    			justifyContent: 'space-around'
    		},
    		headerTitleStyle: {
@@ -50,6 +64,11 @@ const AlbumDetail = ({album}) => {
    			alignItems: 'center',
    			marginLeft: 10,
    			marginRight: 10,
+   		},
+   		imageStyle: {
+   			height: 300,
+   			flex: 1,
+   			width: null
    		}
 
    };

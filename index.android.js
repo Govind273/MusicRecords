@@ -4,16 +4,16 @@
  * @flow
  */
 import React from 'react';
-import { AppRegistry,View} from 'react-native';
+import { AppRegistry, View } from 'react-native';
 import Header from './components/header';
 import AlbumList from './components/AlbumList';
 
 // Create a component
 const App = () => (
-	<View>
-  		<Header headerText={'Chacha'}/>
-  		<AlbumList />
-  	</View>
+  <View style={{ flex: 1 }}>
+    <Header headerText={'Chacha'} />
+    <AlbumList />
+  </View>
 );
 
 
